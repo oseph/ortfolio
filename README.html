@@ -340,18 +340,18 @@ kbd {
 
 <h2 id="toc_1">Installation</h2>
 
-<p>To quickly give the example site a spin on your computer, open up Terminal and navigate to the <code>ortfolio-example</code> folder and enter the following command to start up a local web server (assuming the folder is located in your home directory): </p>
+<p>To quickly give the example site a spin on your computer, open up Terminal and navigate to the <code>ortfolio-example</code> folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): </p>
 
 <div><pre><code class="language-none">$ cd ~/ortfolio-example
 $ php -S localserver:8080</code></pre></div>
 
 <p>Then open up your favourite browser and navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to see ortFolio in action!</p>
 
-<p>Once you are ready to publish your site, simply upload the contents of this folder to the root directory wherever your website is being hosted.</p>
+<p>Once you are ready to publish your site, simply upload the contents of your site folder to the root directory where your website is being hosted.</p>
 
 <h2 id="toc_2">Basic Configuration</h2>
 
-<p>Site-wide configuration are found in the <code>config.php</code> file in the root directory of your website. Here you can update variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.</p>
+<p>Site-wide configuration happens in the <code>config.php</code> file located in the root directory of your website. Here you can update site-wide variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.</p>
 
 <h2 id="toc_3">Creating Sections</h2>
 
@@ -359,19 +359,19 @@ $ php -S localserver:8080</code></pre></div>
 
 <h5 id="toc_4">Step One: make a section folder</h5>
 
-<p>To create a new section with multiple sub-projects, make a copy of the <code>empty-section</code> folder and rename it to whatever you want. Section folders should contain no whitespace, and lowercase letters are for the best. As an example, <code>flower-paintings</code> is better folder name than <code>Flower Paintings</code>.</p>
+<p>To create a new section with multiple sub-projects, make a copy of the <code>empty-section</code> folder and rename it to whatever you want. Section folder names should contain no whitespace, and lowercase letters are for the best. As an example, <code>flower-paintings</code> is better folder name than <code>Flower Paintings</code>.</p>
 
-<p>If you would like to create a section on your page that links to a single page – such as the &#39;about&#39; page in the example site – copy and rename the <code>empty-single-page</code> folder, and edit the index.php file to your heart&#39;s content. (But keep that &quot;content&quot; div in there!)</p>
+<p>If you would like to create a section that links to a single page – such as the &#39;about&#39; page in the example site – copy and rename the <code>empty-single-page</code> folder, and edit the index.php file to your heart&#39;s content. (But keep that &quot;content&quot; div in there!)</p>
 
 <h5 id="toc_5">Step Two: update <code>/config.php</code></h5>
 
-<p>For sections to appear in the side navigation menu they must be added to the <code>$sectionNames</code> array, which can be found in the <code>config.php</code> file in the root directory. </p>
+<p>In order for sections to appear in the side navigation menu they must be added to the <code>$sectionNames</code> array located in the <code>config.php</code> file in the root directory. Let&#39;s walk through an example scenario:</p>
 
-<p>For example: let&#39;s assume you&#39;ve already created three section folders named &quot;flowers&quot;, &quot;landscapes&quot;, and &quot;portraits&quot;. Open up the <code>config.php</code> file and add a line for for each section name following the format below below: </p>
+<p>Assume you&#39;ve already created three section folders named &quot;flowers&quot;, &quot;landscapes&quot;, and &quot;portraits&quot;. Open up the <code>config.php</code> file and add a line for for each section name following the format below: </p>
 
-<div><pre><code class="language-none">$sectionNames[&#39;you-folder-name&#39;] = &#39;Link text!&#39;;</code></pre></div>
+<div><pre><code class="language-none">$sectionNames[&#39;your-section-folder-name&#39;] = &#39;Link text!&#39;;</code></pre></div>
 
-<p>Therefore, with the three example folders mentioned above, your config.php could look something like:</p>
+<p>Therefore, with the three example folders mentioned above, your <code>config.php</code> fild could look something like:</p>
 
 <div><pre><code class="language-none">$sectionNames[&#39;flowers&#39;]    = &#39;Flower photos&#39;;
 $sectionNames[&#39;landscapes&#39;] = &#39;Landscape paintings&#39;;
@@ -382,13 +382,13 @@ $sectionNames[&#39;portraits&#39;]  = &#39;Portraits&#39;;</code></pre></div>
 <p><strong>Tips about sections</strong></p>
 
 <ul>
-<li>Sections will be listed in the side navigation menu in the same order as they appear in <code>config.php</code>.</li>
+<li>Sections are listed in the side navigation menu in the same order as they appear in <code>config.php</code>.</li>
 </ul>
 
 <h2 id="toc_6">Creating Projects</h2>
 
 <ul>
-<li>Image formats supported: jpg, png, gif.</li>
+<li><strong>Image formats supported: jpg, png, gif</strong></li>
 </ul>
 
 <p>Within every non-single-page section you create you will find a folder named <code>empty-project</code>. Duplicate and rename this folder for each project you&#39;d like to have within the current section.</p>
@@ -432,13 +432,13 @@ $omit = false;</code></pre></div>
 
 <h4 id="toc_10">Social Media</h4>
 
-<p>You can add a list of social media links by adding to the <code>$socialMedia</code> array found in <code>config.php</code>. </p>
+<p>You can add a list of social media links (or any outbound links, really) by adding to the <code>$socialMedia</code> array found in <code>config.php</code>. </p>
 
-<p>The format is as follows: <code>$socialMedia[&#39;nameToAppearInMenu&#39;]   = &#39;URL&#39;</code>. Which means that:</p>
+<p>The format is as follows: <code>$socialMedia[&#39;URL&#39;]   = &#39;nameToAppearInMenu&#39;</code>. Which means that:</p>
 
-<div><pre><code class="language-none">$socialMedia[&#39;twitter&#39;] = &#39;http://www.twitter.com/yourUserName&#39;;</code></pre></div>
+<div><pre><code class="language-none">$socialMedia[&#39;http://www.twitter.com/yourUserName&#39;] = &#39;twitter&#39;;</code></pre></div>
 
-<p>would create a link named <code>twitter</code> in your side navigation menu. Fun!</p>
+<p>would create a link named <code>twitter</code> in your side navigation menu linking to a Twitter account. Fun!</p>
 
 <h4 id="toc_11">Analytics🕵️‍♀️</h4>
 
@@ -446,14 +446,14 @@ $omit = false;</code></pre></div>
 
 <h2 id="toc_12">License</h2>
 
-<p><strong>ortFolio</strong> is free, open, released under the <a href="LICENSE.md">MIT license</a>. Do as you wish with it!</p>
+<p><strong>ortFolio</strong> is free, open, and released under the <a href="LICENSE.md">MIT license</a>. Do as you wish with it!</p>
 
 <p><strong>ortFolio</strong> uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. </p>
 
 <h2 id="toc_13"></h2>
 
 <p>Created by <a href="https://www.holinaty.com">Josh Holinaty</a><br>
-No need to credit me, but if you do use ortFolio for your website needs, I&#39;d love to see it and hear about your experience.</p>
+No need to credit me, but if you do use ortFolio for your website needs, I&#39;d love to see it and hear about your experience!</p>
 
 
 
