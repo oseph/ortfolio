@@ -15,7 +15,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/config.php'; ?>
   <?php
   foreach($socialMedia as $key => $name) { ?>
   <div class="sidenav-item">
-    <a href="<?php echo $name; ?>"><?php echo $key; ?></a>
+    <a href="<?php echo $key; ?>"><?php echo $name; ?></a>
   </div>
   <?php } ?>
 </div>

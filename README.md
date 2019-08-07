@@ -10,7 +10,7 @@ This contains an empty ortFolio template, as well as a very minimal example site
 
 ## Installation
 
-To quickly give the example site a spin on your computer, open up Terminal and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your home directory): 
+To quickly give the example site a spin on your computer, open up Terminal and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): 
 
 ```
 $ cd ~/ortfolio-example
@@ -19,12 +19,12 @@ $ php -S localserver:8080
 
 Then open up your favourite browser and navigate to [http://localhost:8080/](http://localhost:8080/) to see ortFolio in action!
 
-Once you are ready to publish your site, simply upload the contents of this folder to the root directory wherever your website is being hosted.
+Once you are ready to publish your site, simply upload the contents of your site folder to the root directory where your website is being hosted.
 
 
 ## Basic Configuration
 
-Site-wide configuration are found in the `config.php` file in the root directory of your website. Here you can update variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.
+Site-wide configuration happens in the `config.php` file located in the root directory of your website. Here you can update site-wide variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.
 
 
 ## Creating Sections
@@ -32,21 +32,21 @@ Site-wide configuration are found in the `config.php` file in the root directory
 _Think of a section as a set of projects. Sections will appear in the side navigation menu, and clicking on a section will show all the thumbnails for each sub-project within said section._
 
 ##### Step One: make a section folder
-To create a new section with multiple sub-projects, make a copy of the `empty-section` folder and rename it to whatever you want. Section folders should contain no whitespace, and lowercase letters are for the best. As an example, `flower-paintings` is better folder name than `Flower Paintings`.
+To create a new section with multiple sub-projects, make a copy of the `empty-section` folder and rename it to whatever you want. Section folder names should contain no whitespace, and lowercase letters are for the best. As an example, `flower-paintings` is better folder name than `Flower Paintings`.
 
-If you would like to create a section on your page that links to a single page – such as the 'about' page in the example site – copy and rename the `empty-single-page` folder, and edit the index.php file to your heart's content. (But keep that "content" div in there!)
+If you would like to create a section that links to a single page – such as the 'about' page in the example site – copy and rename the `empty-single-page` folder, and edit the index.php file to your heart's content. (But keep that "content" div in there!)
 
 ##### Step Two: update `/config.php`
 
-For sections to appear in the side navigation menu they must be added to the `$sectionNames` array, which can be found in the `config.php` file in the root directory. 
+In order for sections to appear in the side navigation menu they must be added to the `$sectionNames` array located in the `config.php` file in the root directory. Let's walk through an example scenario:
 
-For example: let's assume you've already created three section folders named "flowers", "landscapes", and "portraits". Open up the `config.php` file and add a line for for each section name following the format below below: 
+Assume you've already created three section folders named "flowers", "landscapes", and "portraits". Open up the `config.php` file and add a line for for each section name following the format below: 
 
 ```
-$sectionNames['you-folder-name'] = 'Link text!';
+$sectionNames['your-section-folder-name'] = 'Link text!';
 ``` 
 
-Therefore, with the three example folders mentioned above, your config.php could look something like:
+Therefore, with the three example folders mentioned above, your `config.php` fild could look something like:
 
 ```
 $sectionNames['flowers']    = 'Flower photos';
@@ -58,11 +58,11 @@ $sectionNames['portraits']  = 'Portraits';
 
 **Tips about sections**
 
-* Sections will be listed in the side navigation menu in the same order as they appear in `config.php`.
+* Sections are listed in the side navigation menu in the same order as they appear in `config.php`.
 
 ## Creating Projects
 
-* Image formats supported: jpg, png, gif.
+* **Image formats supported: jpg, png, gif**
 
 Within every non-single-page section you create you will find a folder named `empty-project`. Duplicate and rename this folder for each project you'd like to have within the current section.
 
@@ -94,7 +94,6 @@ $omit = false;
 
 If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same.
 
-
 ## SuperGallery!
 
 The the default behaviour of the landing page of your website is to gather all of the project thumbnails in all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
@@ -104,27 +103,27 @@ Note that you can omit sections from the super gallery. To omit individual proje
 ## Further Customization
 
 #### Social Media
-You can add a list of social media links by adding to the `$socialMedia` array found in `config.php`. 
+You can add a list of social media links (or any outbound links, really) by adding to the `$socialMedia` array found in `config.php`. 
 
-The format is as follows: `$socialMedia['nameToAppearInMenu']   = 'URL'`. Which means that:
+The format is as follows: `$socialMedia['URL']   = 'nameToAppearInMenu'`. Which means that:
 
-	$socialMedia['twitter'] = 'http://www.twitter.com/yourUserName';
+	$socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
 	
-would create a link named `twitter` in your side navigation menu. Fun!
+would create a link named `twitter` in your side navigation menu linking to a Twitter account. Fun!
 
 #### Analytics🕵️‍♀️
-You can add Google Analytics to your site by modifying the `google-analytics.php` file located in the `templates/` folder, and setting the `$usingGoogleAnalytics` variable found in the `config.php` file to `true`.
 
+You can add Google Analytics to your site by modifying the `google-analytics.php` file located in the `templates/` folder, and setting the `$usingGoogleAnalytics` variable found in the `config.php` file to `true`.
 
 ## License
 
-**ortFolio** is free, open, released under the [MIT license](LICENSE.md). Do as you wish with it!
+**ortFolio** is free, open, and released under the [MIT license](LICENSE.md). Do as you wish with it!
 
 **ortFolio** uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. 
 
 --
 Created by [Josh Holinaty](https://www.holinaty.com)<br>
-No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience.
+No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
 
 
 

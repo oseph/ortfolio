@@ -12,16 +12,16 @@ $sectionNames['section2']    = 'section two';
 
 /* The super gallery is the grid composed of all project thumbnails, pulled from 
  * the following list of sections. Enter the sections you want the super gallery 
- * to pull thumbnailsfrom. You can omit sections too. */
+ * to pull thumbnails from. You can omit sections too. */
 $superGallerySections = array("section1");
 
 /* This will randomly shuffle the order of all the thumbnails on the homepage. */
 $shuffleThumbnails = true;
 
 /* This is an array of your social media/outbound links: $socialMedia['key'] = value;
- * key   = link text that will appear in side bar 
- * value = URL to your social media page */ 
-$socialMedia['twitter']   = 'http://www.twitter.com';
+ * key   = URL to your social media page 
+ * value = link text that will appear in side bar */ 
+$socialMedia['http://www.twitter.com']   = 'twitter';
 
 
 /* If you have a Google Analytics tracking code, paste it into the 

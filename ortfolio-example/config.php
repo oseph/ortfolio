@@ -21,10 +21,10 @@ $superGallerySections = array("flower-pics","portraits", "vids","landscapes");
 $shuffleThumbnails = true;
 
 /* This is an array of your social media links: $socialMedia['key'] = value;
- * key   = link text that will appear in side bar 
- * value = URL to your social media page */ 
-$socialMedia['twitter']   = 'http://www.twitter.com/';
-$socialMedia['instagram'] = 'http://www.instagram.com/';
+ * key   = URL to your social media page 
+ * value = link text that will appear in side bar */ 
+$socialMedia['http://www.twitter.com/']   = 'twitter';
+$socialMedia['http://www.instagram.com/'] = 'instagram';
 
 /* If you have a Google Analytics tracking code, paste it into the 
  * googleAnalytics.php file located in the templates folder and set the
