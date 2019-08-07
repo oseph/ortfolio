@@ -1,0 +1,21 @@
+<?php
+include $_SERVER["DOCUMENT_ROOT"].'/config.php'; ?>
+<div class="sidenav">
+  <div class="artist-name">
+    <a href="/"><?php echo $artistName; ?></a>
+  </div>
+  <?php
+  foreach($sectionNames as $folderName => $linkText) { ?>
+  <div class="sidenav-item <?php echo ($folderName == $sectionName) ? "active" : ""; ?>">
+    <a href="/<?php echo $folderName; ?>"><?php echo $linkText; ?></a>
+  </div>
+  <?php } ?>
+  <!-- padding between list of sections and social media links -->
+  <div style="padding-top:0.75em;"></div>
+  <?php
+  foreach($socialMedia as $key => $name) { ?>
+  <div class="sidenav-item">
+    <a href="<?php echo $name; ?>"><?php echo $key; ?></a>
+  </div>
+  <?php } ?>
+</div>

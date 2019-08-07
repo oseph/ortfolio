@@ -1,0 +1,243 @@
+body {
+  font-size:1.125em;
+  line-height: 1.25em;
+  margin:1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(1,1,255);
+}
+
+li {
+  list-style: circle;
+}
+
+blockquote {
+  font-size: 0.8em;
+  margin-left: 1em;
+  max-width: 40em;
+}
+
+.content {
+  margin-left: 9em; /* accomodates the width of the sidenav */
+}
+
+/*--------------------------------------------*/
+/*- Sidebar navigation -----------------------*/
+/*--------------------------------------------*/
+
+.sidenav {
+  height: 100%; 
+  width: 10em;
+  position: fixed; 
+  padding-left: 0em;
+  padding-top: 0em;
+  padding-bottom: 0.5em;
+}
+
+.artist-name {
+  width:1em;
+  font-weight: bold;
+  font-size: 1.45em;
+  line-height: 1.0em;
+  margin-bottom:0.8em;
+}
+
+.sidenav .artist-name a {
+  color:black;
+  text-decoration: none;
+}
+
+.sidenav-item {
+  color: black;
+  display: block;
+}
+
+.sidenav-section-title {
+  color: #BBB;
+  display:block;
+}
+
+.sidenav-section {
+  display:block;
+  font-size: 0.9em;
+  padding-left:0.35em;
+  line-height: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+.sidenav a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.sidenav a:hover {
+  background: #DDD;
+  text-decoration: none;
+}
+
+.sidenav .active a {
+  color:white;
+  background:black;
+  padding-left:0.25em;
+  padding-right:0.25em;
+  text-decoration: none;
+}
+
+/*--------------------------------------------*/
+/*- THUMBNAILS -------------------------------*/
+/*--------------------------------------------*/
+
+.grid-item {
+  float: left;
+  width: 32%;
+  max-width: 300px; /* if you want larger/smaller thumbnails, change this */
+  margin: 0em;
+}
+
+.grid-item img {
+  width:100%;
+  height: auto;
+}
+
+.grid-item img:hover {
+  outline-offset: -5px;
+  outline: 5px solid blue;
+}
+
+.about-section { 
+  padding-top:0.5em;
+  width:100%;
+  max-width: 40em;
+}
+
+.about-section p { 
+  margin-left:1em;
+  max-width: 32em;
+}
+
+.project-section {
+  margin-bottom: 0.5em;
+  padding-bottom:1.5em;
+  border-bottom: 1px dotted;
+}
+
+.project-section h3 {
+  font-size: 1.45em;
+  margin:0;
+}
+
+.project-section p {
+  max-width: 35em;
+}
+
+.project-image img {
+  display: block;
+  margin-bottom: 1em;
+  width:100%;
+  max-width: 650px;
+}
+
+.credits {
+  margin:0.5em 1em 0em 0em;
+}
+
+.credits p {
+  color: #888;
+  font-size: 0.8em;
+  margin:0em;
+  line-height: 1.3em;
+}
+
+.aboutSection h3 {
+  display: block;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  body, p, li {
+    font-size:0.95em;
+  }
+
+  .project-section p {
+    max-width: 100%;
+  }
+
+  .project-section img {
+    max-width: 100%;
+  }
+
+  .about-section { 
+    width: 100%;
+  }
+
+  .sidenav {
+    display: block;
+    width:100%;
+    height:auto;
+    position: relative;
+    background-color: white;
+    padding-bottom:0.5em;
+    margin-bottom:1.5em;
+    border-bottom: dotted 1px #BBB;
+  }
+
+  .artist-name {
+    width:100%;
+    margin-bottom: 0.3em;
+  }
+
+  .artist-name a {
+    text-decoration: none;
+  }
+
+  .sidenav-item {
+    color: black;
+    font-weight: bold;
+    display: inline;
+  }
+
+  .sidenav-item+.sidenav-item::before {
+    content:"|";
+    font-weight: normal;
+  }
+
+  .sidenav-section-title {
+    font-weight: bold;
+    display:none;
+  }
+
+  .sidenav-section {
+    display:inline;
+    font-size: 1em;
+    padding-left: 0em;
+    line-height: 1em;
+    padding-bottom: 0.5em;
+  }
+
+  .sidenav a {
+    display: inline;
+    text-decoration: underline;
+  }
+
+  .content {
+    margin-left: 0em;
+  }
+
+  .grid-item {
+    float: left;
+    width: 48%;
+    max-width: 300px;
+    margin:0em;
+  }
+
+  .grid-item img {
+    width:100%;
+  }
+ 
+}
