@@ -107,7 +107,9 @@ You can add a list of social media links (or any outbound links, really) by addi
 
 The format is as follows: `$socialMedia['URL']   = 'nameToAppearInMenu'`. Which means that:
 
-	$socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
+``` php
+$socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
+```
 	
 would create a link named `twitter` in your side navigation menu linking to a Twitter account. Fun!
 
@@ -124,6 +126,3 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 --
 Created by [Josh Holinaty](https://www.holinaty.com)<br>
 No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
-
-
-
