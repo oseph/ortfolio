@@ -68,7 +68,7 @@ Within every non-single-page section you create you will find a folder named `em
 
 Project folders contain two folders: `images` and `thumbnail`. Project images go into the `images` folder  and will be displayed in alphabetical order, so name your files accordingly. Project thumbnail(s) are placed in the `thumbnail` folder. (You can have more than one thumbnail per project if you so desire, because why not?)
 
-To add details to your project, such as a title, credits, and description, simply edit the `section-config.php` file in the project's root directory. For example: here are the contents of your basic `section-config.php` file:
+To add details to your project, such as a title, credits, and description, simply edit the `project-config.php` file in the project's root directory. For example: here are the contents of your basic `project-config.php` file:
 
 ``` php
 <?php 
