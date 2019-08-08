@@ -2,9 +2,9 @@
 
 _A minimal website template for your image-based portfolio needs!_
 
-ortFolio is a zippy little quasi-static website.There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
+ortFolio is a zippy little quasi-static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
 
-Found here is an empty ortFolio template and a very minimal example, complete with a few sections, projects, and images. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
+Found here is an empty ortFolio template and a very minimal running example. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
 
 **Requires**: PHP 7+
 
@@ -12,7 +12,7 @@ Found here is an empty ortFolio template and a very minimal example, complete wi
 
 To quickly give the example site a spin on your computer, open up Terminal (find it via Spotlight) and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): 
 
-```
+``` bash
 $ cd ~/ortfolio-example
 $ php -S localserver:8080
 ```
@@ -42,13 +42,13 @@ In order for sections to appear in the side navigation menu they must be added t
 
 Assume you've already created three section folders named "flowers", "landscapes", and "portraits". Open up the `config.php` file and add a line for for each section name following the format below: 
 
-```
+``` php
 $sectionNames['your-section-folder-name'] = 'Link text!';
 ``` 
 
 Therefore, with the three example folders mentioned above, your `config.php` fild could look something like:
 
-```
+``` php
 $sectionNames['flowers']    = 'Flower photos';
 $sectionNames['landscapes'] = 'Landscape paintings';
 $sectionNames['portraits']  = 'Portraits';
@@ -68,9 +68,9 @@ Within every non-single-page section you create you will find a folder named `em
 
 Project folders contain two folders: `images` and `thumbnail`. Project images go into the `images` folder  and will be displayed in alphabetical order, so name your files accordingly. Project thumbnail(s) are placed in the `thumbnail` folder. (You can have more than one thumbnail per project if you so desire, because why not?)
 
-To add details to your project, such as a title, credits, and description, simply edit the `section-config.php` file in the project's root directory. For example: here are the contents of your basic `section-config.php` file:
+To add details to your project, such as a title, credits, and description, simply edit the `project-config.php` file in the project's root directory. For example: here are the contents of your basic `project-config.php` file:
 
-```
+``` php
 <?php 
 $title = 'Flower Study';
 $creditOne = 'John Jessop Hardwick, 1866';
@@ -88,15 +88,15 @@ $omit = false;
 * Images are set to render at max width of 650px
 * Thumbnails are set to render at a max width of 300px
 * You can change these defaults by editing the CSS
-* * make sure you have those semicolons and proper quotation marks.
+* Make sure you've got those semicolons and proper quotation marks
 
 ## Videos?
 
-If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same.
+If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same: simply add them to their respective folder.
 
 ## SuperGallery!
 
-The the default behaviour of the landing page of your website is to gather all of the project thumbnails in all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
+The default behaviour of the landing page of your website is to gather up all of the project thumbnails found all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
 
 Note that you can omit sections from the super gallery. To omit individual projects from the super gallery, but still have them appear in their own sections, simply set the `project-config.php` variable `$omit` to `true`;
 
@@ -105,13 +105,15 @@ Note that you can omit sections from the super gallery. To omit individual proje
 #### Social Media
 You can add a list of social media links (or any outbound links, really) by adding to the `$socialMedia` array found in `config.php`. 
 
-The format is as follows: `$socialMedia['URL']   = 'nameToAppearInMenu'`. Which means that:
+The format is as follows: `$socialMedia['URL'] = 'nameToAppearInMenu'`. Which means that:
 
-	$socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
+``` php
+$socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
+```
 	
 would create a link named `twitter` in your side navigation menu linking to a Twitter account. Fun!
 
-#### Analytics🕵️‍♀️
+#### Analytics🕵
 
 You can add Google Analytics to your site by modifying the `google-analytics.php` file located in the `templates/` folder, and setting the `$usingGoogleAnalytics` variable found in the `config.php` file to `true`.
 
@@ -121,9 +123,7 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 
 **ortFolio** uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. 
 
---
+---
+
 Created by [Josh Holinaty](https://www.holinaty.com)<br>
 No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
-
-
-
