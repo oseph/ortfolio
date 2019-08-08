@@ -113,7 +113,7 @@ $socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
 	
 would create a link named `twitter` in your side navigation menu linking to a Twitter account. Fun!
 
-#### Analytics🕵️‍♀️
+#### Analytics🕵
 
 You can add Google Analytics to your site by modifying the `google-analytics.php` file located in the `templates/` folder, and setting the `$usingGoogleAnalytics` variable found in the `config.php` file to `true`.
 
