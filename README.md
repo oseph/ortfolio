@@ -2,15 +2,15 @@
 
 _A minimal website template for your image-based portfolio needs!_
 
-ortFolio is a zippy little static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
+ortFolio is a zippy little quasi-static website.There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
 
-This contains an empty ortFolio template, as well as a very minimal example site.
+Found here is an empty ortFolio template and a very minimal example, complete with a few sections, projects, and images. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
 
 **Requires**: PHP 7+
 
 ## Installation
 
-To quickly give the example site a spin on your computer, open up Terminal and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): 
+To quickly give the example site a spin on your computer, open up Terminal (find it via Spotlight) and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): 
 
 ```
 $ cd ~/ortfolio-example
