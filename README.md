@@ -54,7 +54,7 @@ $sectionNames['landscapes'] = 'Landscape paintings';
 $sectionNames['portraits']  = 'Portraits';
 ```
 
-**Note:** The above is handy because it allows you to have include spaces in your link text. Wee!
+**Note:** The above is handy because it allows you to include whitespace in your link text.
 
 **Tips about sections**
 

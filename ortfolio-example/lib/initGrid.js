@@ -6,6 +6,7 @@ var msnry;
 //   itemSelector: '.grid-item',
 //   columnWidth: '.grid-item',
 //   gutter:10,
+//   transitionDuration: 0,
 //   percentPosition: true
 // });
 
@@ -22,6 +23,7 @@ imagesLoaded( grid, function() {
     itemSelector: '.grid-item',
     columnWidth: '.grid-item',
     gutter:10,
+    transitionDuration: 0,
     percentPosition: true
   });
 });
