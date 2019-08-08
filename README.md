@@ -92,11 +92,11 @@ $omit = false;
 
 ## Videos?
 
-If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same.
+If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same: simply add them to their respective folder.
 
 ## SuperGallery!
 
-The the default behaviour of the landing page of your website is to gather all of the project thumbnails in all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
+The default behaviour of the landing page of your website is to gather up all of the project thumbnails found all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
 
 Note that you can omit sections from the super gallery. To omit individual projects from the super gallery, but still have them appear in their own sections, simply set the `project-config.php` variable `$omit` to `true`;
 
