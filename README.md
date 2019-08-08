@@ -2,9 +2,9 @@
 
 _A minimal website template for your image-based portfolio needs!_
 
-ortFolio is a zippy little quasi-static website.There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
+ortFolio is a zippy little quasi-static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
 
-Found here is an empty ortFolio template and a very minimal example, complete with a few sections, projects, and images. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
+Found here is an empty ortFolio template and a very minimal running example. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
 
 **Requires**: PHP 7+
 
@@ -48,7 +48,7 @@ $sectionNames['your-section-folder-name'] = 'Link text!';
 
 Therefore, with the three example folders mentioned above, your `config.php` fild could look something like:
 
-```
+``` php
 $sectionNames['flowers']    = 'Flower photos';
 $sectionNames['landscapes'] = 'Landscape paintings';
 $sectionNames['portraits']  = 'Portraits';
@@ -70,7 +70,7 @@ Project folders contain two folders: `images` and `thumbnail`. Project images go
 
 To add details to your project, such as a title, credits, and description, simply edit the `section-config.php` file in the project's root directory. For example: here are the contents of your basic `section-config.php` file:
 
-```
+``` php
 <?php 
 $title = 'Flower Study';
 $creditOne = 'John Jessop Hardwick, 1866';
