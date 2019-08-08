@@ -12,7 +12,7 @@ Found here is an empty ortFolio template and a very minimal running example. Too
 
 To quickly give the example site a spin on your computer, open up Terminal (find it via Spotlight) and navigate to the `ortfolio-example` folder and enter the following command to start up a local web server (assuming the folder is located in your Home directory): 
 
-```
+``` bash
 $ cd ~/ortfolio-example
 $ php -S localserver:8080
 ```
@@ -88,7 +88,7 @@ $omit = false;
 * Images are set to render at max width of 650px
 * Thumbnails are set to render at a max width of 300px
 * You can change these defaults by editing the CSS
-* * make sure you have those semicolons and proper quotation marks.
+* Make sure you've got those semicolons and proper quotation marks
 
 ## Videos?
 
@@ -105,7 +105,7 @@ Note that you can omit sections from the super gallery. To omit individual proje
 #### Social Media
 You can add a list of social media links (or any outbound links, really) by adding to the `$socialMedia` array found in `config.php`. 
 
-The format is as follows: `$socialMedia['URL']   = 'nameToAppearInMenu'`. Which means that:
+The format is as follows: `$socialMedia['URL'] = 'nameToAppearInMenu'`. Which means that:
 
 ``` php
 $socialMedia['http://www.twitter.com/yourUserName'] = 'twitter';
@@ -124,5 +124,6 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 **ortFolio** uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. 
 
 --
+
 Created by [Josh Holinaty](https://www.holinaty.com)<br>
 No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
