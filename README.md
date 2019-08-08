@@ -42,7 +42,7 @@ In order for sections to appear in the side navigation menu they must be added t
 
 Assume you've already created three section folders named "flowers", "landscapes", and "portraits". Open up the `config.php` file and add a line for for each section name following the format below: 
 
-```
+``` php
 $sectionNames['your-section-folder-name'] = 'Link text!';
 ``` 
 
@@ -123,7 +123,7 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 
 **ortFolio** uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. 
 
---
+---
 
 Created by [Josh Holinaty](https://www.holinaty.com)<br>
 No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
