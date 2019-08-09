@@ -1,12 +1,15 @@
-## ortFolio v1.2
+## ortFolio v1.3
 
 _A minimal website template for your image-based portfolio needs!_
 
 ortFolio is a zippy little quasi-static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
 
-Found here is an empty ortFolio template and a very minimal running example. Too see a live example of ortFolio in action right now, you can check out [my personal website](https://www.holinaty.com).
+Found here is an empty ortFolio template and a very minimal running example. 
 
-**Requires**: PHP 7+
+* To see a live version of the minimal running example, [go here](https://www.holinaty.com/ortfolio-demo).
+* For a more fleshed out (and slightly modified) ortFolio site in action, [see my personal website](https://www.holinaty.com).
+
+**Requires**: PHP 7+ (which is pretty standard these days)
 
 ## Installation
 
@@ -25,6 +28,10 @@ Once you are ready to publish your site, simply upload the contents of your site
 ## Basic Configuration
 
 Site-wide configuration happens in the `config.php` file located in the root directory of your website. Here you can update site-wide variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.
+
+By default ortFolio is set up to run from the root directory of wherever you're hosting your site from. If that's what you want, then ignore the next paragraph.
+
+If you want to serve ortFolio from a sub-folder, e.g. `www.yoursite.com/ortfolio-site`, you will need to modify the `$ORTFOLIO_LOCATION` variable in `config.php` by giving it the absolute web path to the folder you're serving it from. For example, in the URL above `$ORTFOLIO_LOCATION = "/ortfolio-site";` because I've put the contents of that ortFolio site in a folder named `ortfolio-site`, in the root of my server.
 
 
 ## Creating Sections
