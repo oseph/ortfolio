@@ -1,16 +1,16 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] ."/config.php"; ?>
+include __DIR__."/../config.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <?php include $_SERVER['DOCUMENT_ROOT'] ."/templates/google-analytics.php"; ?>
+  <?php include $ROOT ."/templates/google-analytics.php"; ?>
   <meta charset="utf-8">
   <title><?php echo $artistName .": ". $title; ?></title>
-  <link rel="stylesheet" type="text/css" href="/static/style.css" >
+  <link rel="stylesheet" type="text/css" href="<?php echo $ORTFOLIO_LOCATION."/static/style.css"; ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
 <body>
-  <?php include($_SERVER["DOCUMENT_ROOT"] . "/templates/sidenav.php"); ?>
+  <?php include($ROOT . "/templates/sidenav.php"); ?>
   <div class="content"> 
     <div class="project-section">
       <h3><?php echo $title; ?></h3>
@@ -26,7 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'] ."/config.php"; ?>
       <div class="project-image">
         <?php
           foreach ($images as $imgDir) {
-            $path = "/".$sectionName."/".$projectName."/images";
+            $path = $ORTFOLIO_LOCATION."/".$sectionName."/".$projectName."/images";
             echo '<img src="' .$path ."/". basename($imgDir) . '" alt="'.basename($imgDir).'">';
           }
         ?>
