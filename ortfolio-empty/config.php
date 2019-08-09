@@ -1,5 +1,12 @@
 <?php 
 
+/* This tells ortFolio where it's located relative to the root of your webserver.
+ * Leave empty/do not touch if serving ortFolio from your server's root directory.
+ * For example, if serving ortFolio from a folder named `ortfolio` in your root directory, 
+ * then enter the absolute web path: $ORTFOLIO_LOCATION = "/ortfolio"; */
+$ORTFOLIO_LOCATION = "";
+$ROOT = $_SERVER["DOCUMENT_ROOT"].$ORTFOLIO_LOCATION;
+
 /* Enter your name here: */
 $artistName = "Ort Folio";
 

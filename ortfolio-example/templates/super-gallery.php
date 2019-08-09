@@ -1,17 +1,17 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"].'/config.php';
+include __DIR__."/../config.php";
 $projects = array();
-$namePairs = array();
+$sectionNames = array();
 echo '<div class="grid">'.PHP_EOL;
 
 // first add all the section names
 foreach ($superGallerySections as $sectionName) { 
-  $sectionProjects = glob($_SERVER['DOCUMENT_ROOT'] ."/".$sectionName."/*", GLOB_ONLYDIR);
+  $sectionProjects = glob($ROOT ."/".$sectionName."/*", GLOB_ONLYDIR);
 
   // keep track of the section name that is affiliated with each project; this will
   // help you to link to the projects appropriately.
   foreach ($sectionProjects as $projectName) { 
-    $namePairs[$projectName] = $sectionName; 
+    $sectionNames[$projectName] = $sectionName; 
   }
   $projects = array_merge($sectionProjects , $projects);
 } 
@@ -22,7 +22,7 @@ if ($shuffleThumbnails) {
 
 foreach ($projects as $project) {
   $projectName = basename($project);
-  $projectPath = $namePairs[$project]."/".$projectName;
+  $projectPath = $ORTFOLIO_LOCATION ."/".$sectionNames[$project]."/".$projectName;
   $skip = false;
 
   if (file_exists($projectPath."/project-config.php")) {
