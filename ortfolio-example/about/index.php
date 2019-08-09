@@ -16,11 +16,14 @@ include "section-config.php";
   <div class="content">
     <div class="about-section">
       <h3>ortFolio</h3>
-      <p>This website is made using ortFolio, a free and open minimal template for image-based portfolio needs. <a href="https://gitlab.com/oseph/ortfolio">Get it and learn about it here.</a></p>
+      <p><i>ortFolio</i> is a free, open, minimal website template for image-based portfolios.</p>
+      <p><a href="https://gitlab.com/oseph/ortfolio">Get it and learn about it here.</a></p>
 
-      <p> All images and image credits have been pulled from the wonderful archives over at the <a href="https://www.rijksmuseum.nl">Rijksmuseum</a>.</p>
+      <p>ortFolio is released under the <a href="license.txt">MIT license.</a></p>
 
-      <p><i>Created by Josh Holinaty </i></p>
+      <p> All images and image credits on this demo have been pulled from the wonderful archives over at the <a href="https://www.rijksmuseum.nl">Rijksmuseum</a>.</p>
+
+      <p><i>Created by <a href="https://www.holinaty.com">Josh Holinaty</a></i></p>
     </div>
   </div>
 </body>
