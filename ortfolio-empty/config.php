@@ -12,10 +12,13 @@ $artistName = "Ort Folio";
 
 /* Section names appear in the sidebar navigation menu, and appear in the
  * same order as they are listed below. Section names must have the same 
- * name as the folders you create for them. Comma separated list of values 
- * within quotations. */
-$sectionNames['section1']    = 'section one';
-$sectionNames['section2']    = 'section two';
+ * name as the folders you create for them. 
+ *
+ * Follow the template below where:
+ *     $sectionNames['your-section-folder-name'] = 'Text in sidenav!';
+ */
+$sectionNames['section1'] = 'section one';
+$sectionNames['section2'] = 'section two';
 
 /* The super gallery is the grid composed of all project thumbnails, pulled from 
  * the following list of sections. Enter the sections you want the super gallery 
@@ -28,7 +31,7 @@ $shuffleThumbnails = true;
 /* This is an array of your social media/outbound links: $socialMedia['key'] = value;
  * key   = URL to your social media page 
  * value = link text that will appear in side bar */ 
-$socialMedia['http://www.twitter.com']   = 'twitter';
+$socialMedia['http://www.twitter.com'] = 'twitter';
 
 
 /* If you have a Google Analytics tracking code, paste it into the 

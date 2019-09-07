@@ -11,9 +11,12 @@ $ROOT = $_SERVER["DOCUMENT_ROOT"].$ORTFOLIO_LOCATION;
 $artistName = "ort Folio";
 
 /* Section names appear in the sidebar navigation menu, and appear in the
- * same order as they are listed below. And remember: section names must 
- * have the same name as the folders you create for them. 
- * $sectionNames["sectionFolderName"] = 'link text in menu'; */
+ * same order as they are listed below. Section names must have the same 
+ * name as the folders you create for them. 
+ *
+ * Follow the template below where:
+ *     $sectionNames['your-section-folder-name'] = 'Text in sidenav!';
+ */
 $sectionNames["flowers"] = 'flowers';
 $sectionNames["portraits"] = 'portraits';
 $sectionNames["landscapes"] = 'landscapes';
