@@ -1,4 +1,4 @@
-## ortFolio v1.3
+## ortFolio v1.3.1
 
 _A minimal website template for your image-based portfolio needs!_
 
