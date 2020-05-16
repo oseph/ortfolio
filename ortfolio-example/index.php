@@ -1,5 +1,7 @@
 <?php include (__DIR__)."/config.php" ?>
 <!DOCTYPE html>
+<!-- This website uses ortFolio, a free and open template created by Josh Holinaty, 2019.
+Get it at: github.com/oseph/ortfolio. Released under the MIT Licence. -->
 <html>
   <head>
     <?php include $ROOT."/templates/google-analytics.php"; ?>
