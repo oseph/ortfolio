@@ -11,7 +11,7 @@ include __DIR__."/../config.php";?>
   </div>
   <?php } ?>
   <!-- padding between list of sections and social media links -->
-  <div class="sidenav-item"style="padding-top:0.75em;"></div>
+  <div class="sidenav-item" style="padding-top:0.75em;"></div>
   <?php
   foreach($socialMedia as $key => $name) { ?>
   <div class="sidenav-item">

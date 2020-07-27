@@ -1,10 +1,10 @@
 <?php include (__DIR__)."/config.php" ?>
 <!DOCTYPE html>
-<!-- This website uses ortFolio, a free and open template created by Josh Holinaty, 2019.
+<!-- This website uses ortFolio (v.<?php echo $version; ?>), a free and open template created by Josh Holinaty, 2019.
 Get it at: github.com/oseph/ortfolio. Released under the MIT Licence. -->
 <html>
   <head>
-    <?php include $ROOT."/templates/google-analytics.php"; ?>
+    <?php include $ROOT."/templates/google-analytics.php";?>
     <meta charset="utf-8">
     <title><?php echo $artistName; ?></title>
     <link rel="stylesheet" type="text/css" href="<?php echo $ORTFOLIO_LOCATION."/static/style.css"; ?>" >
@@ -13,7 +13,7 @@ Get it at: github.com/oseph/ortfolio. Released under the MIT Licence. -->
 <body>
   <!-- SIDEBAR NAVIGATION -->
   <?php include $ROOT."/templates/sidenav.php"; ?>
-  <!-- CONTENT (aka Thumbfest!) -->
+  <!-- THUMBNAIL GALLERY -->
   <div class="content">
   <?php include "templates/super-gallery.php"; ?>
   </div>

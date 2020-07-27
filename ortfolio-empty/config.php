@@ -1,5 +1,4 @@
 <?php 
-
 /* This tells ortFolio where it's located relative to the root of your webserver.
  * Leave empty/do not touch if serving ortFolio from your server's root directory.
  * For example, if serving ortFolio from a folder named `ortfolio` in your root directory, 
@@ -8,7 +7,8 @@ $ORTFOLIO_LOCATION = "";
 $ROOT = $_SERVER["DOCUMENT_ROOT"].$ORTFOLIO_LOCATION;
 
 /* Enter your name here: */
-$artistName = "Ort Folio";
+$artistName = "ortFolio";
+$version = "1.4.0";
 
 /* Section names appear in the sidebar navigation menu, and appear in the
  * same order as they are listed below. Section names must have the same 

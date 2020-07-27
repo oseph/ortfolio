@@ -7,11 +7,11 @@ include __DIR__."/../config.php";?>
   <?php
   foreach($sectionNames as $folderName => $linkText) { ?>
   <div class="sidenav-item <?php echo ($folderName == $sectionName) ? "active" : ""; ?>">
-    <a href="<?php echo $ORTFOLIO_LOCATION."/".$folderName."/"; ?>"><?php echo $linkText; ?></a>
+    <a href="<?php echo $ORTFOLIO_LOCATION."/".$folderName; ?>/"><?php echo $linkText; ?></a>
   </div>
   <?php } ?>
   <!-- padding between list of sections and social media links -->
-  <div style="padding-top:0.75em;"></div>
+  <div class="sidenav-item" style="padding-top:0.75em;"></div>
   <?php
   foreach($socialMedia as $key => $name) { ?>
   <div class="sidenav-item">

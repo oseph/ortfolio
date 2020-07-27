@@ -1,4 +1,4 @@
-## ortFolio v1.3.1
+## ortFolio v1.4.0
 
 _A minimal website template for your image-based portfolio needs!_
 
@@ -101,9 +101,13 @@ $omit = false;
 
 If you want to embed YouTube/Vimeo videos into a project page, simply paste the embed code into the `project-config.php` description variable. Thumbnails and other images are the same: simply add them to their respective folder.
 
+## Music Albums?
+
+ortFolio comes with a simple music template page to accommodate a Bandcamp embedded player. Use the `empty-music-project` template and simply paste the iframe embed code into the project config's `$iframe` variable. Thumbnails and other images are the same, but there is also an folder for album cover art. Simply add your images to their respective folder.
+
 ## SuperGallery!
 
-The default behaviour of the landing page of your website is to gather up all of the project thumbnails found all of your sections, creating a sort of Super Gallery. Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
+The default behaviour of the landing page of your website is to gather up all of the project thumbnails found in all of your sections, creating a "Super Gallery." Similar to the `$sectionNames` variable, you will need to add the sections you'd like to pull thumbnails from. For example: `$superGallerySections = array("flowers", "portraits");`
 
 Note that you can omit sections from the super gallery. To omit individual projects from the super gallery, but still have them appear in their own sections, simply set the `project-config.php` variable `$omit` to `true`;
 
