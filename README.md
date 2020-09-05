@@ -6,8 +6,8 @@ ortFolio is a zippy little quasi-static website. There are no databases to set u
 
 Found here is an empty ortFolio template and a very minimal running example. 
 
-* To see a live version of the minimal running example, [go here](https://www.holinaty.com/ortfolio-demo).
-* For a more fleshed out (and slightly modified) ortFolio site in action, [see my personal website](https://www.holinaty.com).
+* To see a minimal running example, [go here](https://www.holinaty.com/ortfolio-demo)
+* or [check out this list of websites](ORTFOLIOFANS.md) to see more examples of ortFolio in action
 
 **Requires**: PHP 7+ (which is pretty standard these days)
 
@@ -137,4 +137,4 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 ---
 
 Created by me, [Josh Holinaty](https://www.holinaty.com)<br>
-No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience! [Here is a short list of websites that use ortfolio](ORTFOLIOFANS.md).
+No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
