@@ -132,9 +132,9 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 
 **ortFolio** is free, open, and released under the [MIT license](LICENSE.md). Do as you wish with it!
 
-**ortFolio** uses Masonry for the thumbnail grids. Masonry is also released under the MIT license. 
+**ortFolio** uses [Masonry](https://github.com/desandro/masonry) for the thumbnail grids. Masonry is also released under the MIT license. 
 
 ---
 
-Created by [Josh Holinaty](https://www.holinaty.com)<br>
-No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
+Created by me, [Josh Holinaty](https://www.holinaty.com)<br>
+No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience! [Here is a short list of websites that use ortfolio](ORTFOLIOFANS.md).
