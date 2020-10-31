@@ -1,5 +1,5 @@
 <?php 
-  include __DIR__."/../config.php";
+  include $_SERVER["DOCUMENT_ROOT"]."/config.php";
   $projects = glob($ROOT .'/'.$sectionName."/*", GLOB_ONLYDIR);
   if ($shuffleSectionThumbnails) { shuffle($projects); }
 ?>
@@ -7,9 +7,10 @@
 <div class="grid">
 <?php 
   foreach ($projects as $project) {
+
     echo "<div class='grid-item'>". PHP_EOL;
     $projectName = basename($project);
-    $projectPath = $ORTFOLIO_LOCATION."/".$sectionName."/".$projectName."/";
+    $projectPath = "/".$sectionName."/".$projectName."/";
     $thumbs = glob($project."/thumbnail/"."*.{jpg,jpeg,gif,png}", GLOB_BRACE);
   
     foreach ($thumbs as $thumb) {

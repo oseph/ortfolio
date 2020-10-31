@@ -22,6 +22,7 @@ $sectionNames["portraits"] = 'portraits';
 $sectionNames["landscapes"] = 'landscapes';
 $sectionNames["other"] = 'other';
 $sectionNames["about"] = 'about';
+$sectionNames["musics"] = 'muzak';
 
 /* The super gallery is the grid composed of all project thumbnails, pulled from 
  * the following list of sections. Enter the sections you want the super gallery 

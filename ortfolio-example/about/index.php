@@ -17,7 +17,7 @@ include "section-config.php";
     <div class="about-section">
       <h3>ortFolio</h3>
       <p><i>ortFolio</i> is a free, open, minimal website template for image-based portfolios.</p>
-      <p><a href="https://gitlab.com/oseph/ortfolio">Get it and learn about it here.</a></p>
+      <p><a href="https://github.com/oseph/ortfolio">Get it and learn about it here.</a></p>
 
       <p>ortFolio is released under the <a href="license.txt">MIT license.</a></p>
 

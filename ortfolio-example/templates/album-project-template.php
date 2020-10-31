@@ -23,16 +23,13 @@ include __DIR__."/../config.php"; ?>
 
       <?php if ($description) echo '<p>'.$description.'</p>';?>
 
-      <div id="player-and-album">
+      <div class="player-and-album">
       <?php
           echo $iframe;
           $path = $ORTFOLIO_LOCATION."/".$sectionName."/".$projectName."/cover";
           echo '<img src="'.$path ."/". basename($albumCover) .'" alt="'.basename($albumCover) .'">';
         ?>
       </div>
-
-
-      
       
       <div class="project-image">
         <?php
