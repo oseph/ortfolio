@@ -9,7 +9,8 @@ include "../section-config.php";
 
 /* This reads folder name. This is for proper URL linking. */
 $projectName = basename(__DIR__);
-$currPath = $ROOT ."/".$sectionName. "/".$projectName;
+$currPath = $ROOT ."/".$sectionName."/".$projectName;
+
 // This reads all the images in the images directory
 $images = glob($currPath."/images/*.{jpg,jpeg,gif,png}", GLOB_BRACE);
 

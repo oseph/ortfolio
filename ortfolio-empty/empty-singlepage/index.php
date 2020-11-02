@@ -14,7 +14,7 @@ include "section-config.php";
 <body>
   <?php include($ROOT . "/templates/sidenav.php"); ?>
   <div class="content">
-    <p> Enter your content here </p>
+    <p>Enter your content here.</p>
   </div>
 </body>
 </html>

@@ -1,13 +1,15 @@
 <?php 
 include __DIR__."/../config.php"; ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<?php include $ROOT."/templates/ortfolio-credit.php"; ?>
 <head>
-  <?php include $ROOT ."/templates/google-analytics.php"; ?>
+  <?php include $ROOT."/templates/google-analytics.php"; ?>
   <meta charset="utf-8">
   <title><?php echo $artistName .": ". $title; ?></title>
   <link rel="stylesheet" type="text/css" href="<?php echo $ORTFOLIO_LOCATION."/static/style.css"; ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include $ROOT.'/templates/favicon.php';?>
 </head>
 <body>
   <?php include($ROOT . "/templates/sidenav.php"); ?>
@@ -16,8 +18,8 @@ include __DIR__."/../config.php"; ?>
       <h3><?php echo $title; ?></h3>
       <div class="credits">
         <?php 
-          if ($creditOne) echo '<p>'.$creditOne.'</p>'; 
-          if ($creditTwo) echo '<p>'.$creditTwo.'</p>'; 
+          if (isset($creditOne))echo '<p>'.$creditOne.'</p>'; 
+          if (isset($creditTwo)) echo '<p>'.$creditTwo.'</p>'; 
         ?>
       </div>
 
@@ -30,7 +32,7 @@ include __DIR__."/../config.php"; ?>
           echo '<img src="'.$path ."/". basename($albumCover) .'" alt="'.basename($albumCover) .'">';
         ?>
       </div>
-
+      
       <div class="project-image">
         <?php
           foreach ($images as $imgDir) {

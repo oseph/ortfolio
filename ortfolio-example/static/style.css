@@ -1,7 +1,17 @@
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("LiberationSerif-Regular.ttf");
+}
+
 body {
+  font-family: "Times New Roman", "Liberation Serif",  serif;
   font-size:1.125em;
   line-height: 1.25em;
   margin:1.5em;
+}
+
+p {
+  max-width: 600px;
 }
 
 a {
@@ -9,21 +19,43 @@ a {
 }
 
 a:visited {
-  color: rgb(1,1,255);
+  color: blue;
 }
 
-li {
+a:hover {
+  text-decoration: underline;
+}
+
+ul, li {
+  margin-left: 1em; padding-left: 0;
+}
+
+ul {
   list-style: circle;
 }
 
+ul ul {
+  list-style: none;
+}
+
+ul ul li:before{
+  list-style: circle;
+  content: '→ ';
+}
+
 blockquote {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-left: 1em;
-  max-width: 40em;
+  max-width: 500px;
+}
+
+.news-container {
+  max-width: 600px;
 }
 
 .content {
   margin-left: 9em; /* accomodates the width of the sidenav */
+
 }
 
 /*--------------------------------------------*/
@@ -59,7 +91,7 @@ blockquote {
 
 .sidenav-section-title {
   color: #BBB;
-  display:block;
+  display: block;
 }
 
 .sidenav-section {
@@ -70,22 +102,26 @@ blockquote {
   padding-bottom: 0.5em;
 }
 
-.sidenav a {
+.sidenav-item a {
   font-weight: bold;
   color: black;
   text-decoration: none;
+  transition: background 0.15s, padding 0.15s;
 }
 
-.sidenav a:hover {
-  background: #DDD;
+.sidenav-item a:hover {
+  padding: 0 0.25em;
+}
+
+.sidenav .artist-name a:hover {
+  color:black;
   text-decoration: none;
 }
 
 .sidenav .active a {
   color:white;
   background:black;
-  padding-left:0.25em;
-  padding-right:0.25em;
+  padding: 0 0.25em;
   text-decoration: none;
 }
 
@@ -97,37 +133,32 @@ blockquote {
   float: left;
   width: 32%;
   max-width: 300px; /* if you want larger/smaller thumbnails, change this */
-  margin: 0em;
+  margin: 0.2em 0em;
 }
 
 .grid-item img {
   width:100%;
   height: auto;
+  outline: 0px solid gainsboro;
+  outline-offset: 0px;
+  box-shadow: 0px 5px 7px rgb(180,180,180);
+  transition: outline 0.125s, outline-offset 0.25s;
 }
 
 .grid-item img:hover {
-  outline-offset: -5px;
-  outline: 5px solid blue;
-}
-
-.about-section { 
-  padding-top:0.5em;
   width:100%;
-  max-width: 40em;
+  height: auto;
+  outline: 6px solid gainsboro;
+  outline-offset:-6px;
 }
 
-.about-section p { 
-  margin-left:1em;
-  max-width: 32em;
-}
+/*--------------------------------------------*/
+/*- PROJECT STYLIN' --------------------------*/
+/*--------------------------------------------*/
 
 .project-section {
-  /*display: block;*/
-  /*max-width: 35em;*/
   margin-bottom: 0.5em;
   padding-bottom:1.5em;
-  border-bottom: 1px dotted;
-
 }
 
 .project-section h3 {
@@ -135,15 +166,12 @@ blockquote {
   margin:0;
 }
 
-.project-section p {
-  max-width: 35em;
-}
-
-.project-image img {
+.project-section img {
   display: block;
   margin-bottom: 1em;
   width:100%;
   max-width: 650px;
+  box-shadow: 0px 5px 7px rgb(180,180,180);
 }
 
 .credits {
@@ -152,9 +180,8 @@ blockquote {
 
 .credits p {
   color: #888;
-  font-size: 0.8em;
-  margin:0em;
-  line-height: 1.3em;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 .aboutSection h3 {
@@ -162,7 +189,28 @@ blockquote {
   font-size: 1em;
 }
 
-.player-and-album {
+.news {
+  font-size: 0.8em;
+  display: inline-block;
+  padding:0 0.5em;
+  margin-bottom: 0.5em;
+  background: white;
+  width: auto;
+}
+
+.news p {
+  margin: 0;
+  color: rgb(60,60,60);
+}
+
+.news a {
+  margin: 0;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#player-and-album {
   width: 650px;
   display: flex;
   flex-wrap: nowrap;
@@ -180,16 +228,162 @@ iframe {
   border: 0;
 }
 
-.player-and-album img  {
+#player-and-album img  {
   order: 2;
   width: 50%;
   height:100%;
   margin-left: 0.5em;
 }
 
+/*--------------------------------------------*/
+/*- Blog related -----------------------------*/
+/*--------------------------------------------*/
+
+.blog-roll-item {
+  display: flex;
+  width: 100%;
+  max-width: 580px;
+  margin-bottom: 1.5em;
+}
+
+.blog-roll-item-thumbnail {
+  float: left;
+  padding-right: 1em;
+}
+
+.blog-roll-item-thumbnail img {
+  width: 150px;
+  box-shadow: 0px 5px 7px darkgrey;
+}
+
+.blog-roll-item-info-container {
+  max-width: 600px;
+}
+
+.blog-roll-item-intro p {
+  margin: 0;
+}
+
+.blog-roll-title a {
+  color:black;
+  font-size: 1.1em;
+  margin-bottom: 0em;
+  text-decoration: underline;
+}
+
+.blog-post-content {
+  max-width: 600px;
+}
+
+
+.blog-post-content img {
+  display: inline;
+  width: 100%;
+  box-shadow: 0px 5px 7px rgb(180,180,180);
+}
+
+.date {
+  color:rgb(140,140,140);
+  margin-bottom: 1em;
+  font-size: 0.85em;
+}
+
+.date p {
+  margin-top:0.25em;
+}
+
+.blog-post-content h3 {
+  margin-bottom: 0.25em;
+}
+
+.blog-prev-post {
+  display:inline-block;
+  width:33%;
+  order:1;
+}
+
+.blog-prev-post a {
+  display:block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.blog-next-post {
+  width:33%;
+  display:inline-block;
+  order:3;
+  text-align: right;
+}
+
+.blog-next-post a {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.blog-next-post span {
+  display: block;
+}
+
+.blog-all-posts {
+  order:2;
+  display:inline-block;
+  width:33%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.blog-nav { 
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  padding:0.5em 0em;
+  width:100%;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  margin: 2em 0em;
+ }
+
+/*--------------------------------------------*/
+/*- Blog related -----------------------------*/
+/*--------------------------------------------*/
+
+.list-gallery-item {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1em;
+  max-width: 600px;
+}
+
+.list-gallery-item-thumbnail {
+  padding-right: 1em;
+  margin-bottom: 0em;
+}
+
+
+/*--------------------------------------------*/
+/*- Styling for small screens ----------------*/
+/*--------------------------------------------*/
+
+
 @media screen and (max-width: 700px) {
   body, p, li {
-    font-size:0.95em;
+    font-size: 0.95em;
+  }
+
+  .list-gallery-item-thumbnail img {
+    max-width: 150px;
+  }
+
+  .list-gallery-item-info p {
+    max-width: 450px;
+  }
+
+  .grid-item {
+    width:47%;
   }
 
   .project-section p {
@@ -206,22 +400,52 @@ iframe {
 
   .sidenav {
     display: block;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     position: relative;
-    background-color: white;
-    padding-bottom:0.5em;
-    margin-bottom:1.5em;
-    border-bottom: dotted 1px #BBB;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    /*border-bottom: dotted 1px #BBB;*/
   }
 
   .artist-name {
-    width:100%;
-    margin-bottom: 0.3em;
+    width: auto;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:0.9em;
+    margin-bottom: 0em;
   }
+
 
   .artist-name a {
     text-decoration: none;
+  }
+
+  .blog-roll-item { 
+    display: inline-block;
+    padding-bottom: 1em; 
+  }
+
+  .blog-roll-item-container { 
+    display: inline-block;
+    padding-bottom: 1em; 
+  }
+
+  .blog-roll-title { 
+    display: inline;
+  }
+
+  .blog-roll-item-thumbnail {
+    max-width:25%;
+  }
+
+  .blog-roll-item-thumbnail img {
+    width:100%;
+  }
+
+  .blog-post-content img {
+    display:block;
   }
 
   .sidenav-item {
@@ -257,17 +481,6 @@ iframe {
     margin-left: 0em;
   }
 
-  .grid-item {
-    float: left;
-    width: 48%;
-    max-width: 300px;
-    margin:0em;
-  }
-
-  .grid-item img {
-    width:100%;
-  }
-
   iframe {
     flex-grow: 2;
     order: 0;
@@ -277,7 +490,7 @@ iframe {
     margin-bottom: 0.5em;
   }
 
-  .player-and-album {
+  #player-and-album {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -285,7 +498,7 @@ iframe {
     margin-bottom: 0.5em;
   }
 
-  .player-and-album img  {
+  #player-and-album img  {
     order: 2;
     width: 100%;
     height:100%;

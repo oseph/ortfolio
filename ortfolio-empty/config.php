@@ -6,9 +6,15 @@
 $ORTFOLIO_LOCATION = "";
 $ROOT = $_SERVER["DOCUMENT_ROOT"].$ORTFOLIO_LOCATION;
 
+/*
+ * The absolute directory of your blog. By default, posts are expected to be in
+ * a folder named `blog`. Change this value if you want your blog in a 
+ * different folder...
+ */
+$BLOG_DIR = "/blog";
+
 /* Enter your name here: */
-$artistName = "ortFolio";
-$version = "1.4.0";
+$artistName = "ortfolio";
 
 /* Section names appear in the sidebar navigation menu, and appear in the
  * same order as they are listed below. Section names must have the same 
@@ -17,22 +23,22 @@ $version = "1.4.0";
  * Follow the template below where:
  *     $sectionNames['your-section-folder-name'] = 'Text in sidenav!';
  */
-$sectionNames['section1'] = 'section one';
-$sectionNames['section2'] = 'section two';
+$sectionNames["empty-list"] = 'empty list';
+$sectionNames["empty-section"] = 'empty section';
+$sectionNames["blog"] = 'blog';
+$sectionNames["empty-singlepage"] = 'single page';
 
 /* The super gallery is the grid composed of all project thumbnails, pulled from 
- * the following list of sections. Enter the sections you want the super gallery 
- * to pull thumbnails from. You can omit sections too. */
-$superGallerySections = array("section1");
-
-/* This will randomly shuffle the order of all the thumbnails on the homepage. */
+ * the following list of sections. Enter the section foldernames you want the super gallery 
+ * to pull thumbnailsfrom. You can omit sections too. */
+$superGallerySections = array("empty-list","empty-section", "blog-example","empty-singlepage");
 $shuffleThumbnails = true;
 
-/* This is an array of your social media/outbound links: $socialMedia['key'] = value;
+/* This is an array of your social media links: $socialMedia['key'] = value;
  * key   = URL to your social media page 
  * value = link text that will appear in side bar */ 
-$socialMedia['http://www.twitter.com'] = 'twitter';
-
+// $socialMedia['http://www.twitter.com/']   = 'twitter';
+// $socialMedia['http://www.instagram.com/'] = 'instagram';
 
 /* If you have a Google Analytics tracking code, paste it into the 
  * googleAnalytics.php file located in the templates folder and set the

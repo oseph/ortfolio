@@ -1,28 +1,37 @@
-<?php 
-  include __DIR__."/../config.php";
-  $projects = glob($ROOT .'/'.$sectionName."/*", GLOB_ONLYDIR);
-  if ($shuffleSectionThumbnails) { shuffle($projects); }
-?>
-
 <div class="grid">
 <?php 
+$projects = glob($ROOT .'/'.$sectionName."/*", GLOB_ONLYDIR);
+
+// loop through each project, and for each of it's thumbnails, create a HTML for a thumbnail linking to that project.
+function createThumbs($projects, $sectionName, $ROOT, $ORTFOLIO_LOCATION): array {
+  $thumbdivs = array();
   foreach ($projects as $project) {
-    echo "<div class='grid-item'>". PHP_EOL;
     $projectName = basename($project);
-    $projectPath = $ORTFOLIO_LOCATION."/".$sectionName."/".$projectName."/";
-    $thumbs = glob($project."/thumbnail/"."*.{jpg,jpeg,gif,png}", GLOB_BRACE);
-  
+    $projectPath = "/".$sectionName."/".$projectName;
+    $thumbs = glob($ROOT ."/".$projectPath."/thumbnail/"."*.{jpg,jpeg,gif,png}", GLOB_BRACE);
+        
     foreach ($thumbs as $thumb) {
-      printf('<a href="%s"><img src="%s" alt="%s"></a>'. PHP_EOL, 
-        $projectPath,
-        $projectPath."/thumbnail/".basename($thumb),
-        basename($project)
-      );
+      $thumbdivs[] = sprintf('<div class="grid-item">'.PHP_EOL.'<a href="%s">
+    <img src="%s" alt="%s"></a></div>'.PHP_EOL, 
+      $ORTFOLIO_LOCATION.$projectPath,
+      $ORTFOLIO_LOCATION.$projectPath."/thumbnail/".basename($thumb),
+      basename($project));
     }
-    echo "</div>" . PHP_EOL;
   }
+  return $thumbdivs;
+}
+
+$thumbdivs = createThumbs($projects, $sectionName, $ROOT, $ORTFOLIO_LOCATION);
+
+if ($shuffleThumbnails) { 
+  shuffle($thumbdivs);
+}
+
+foreach ($thumbdivs as $thumb) {
+  echo $thumb;
+}
 ?>
 </div>
-<script type="text/javascript" src="<?php echo $ORTFOLIO_LOCATION."/lib/masonry.pkgd.min.js";?>"></script>
-<script type="text/javascript" src="<?php echo $ORTFOLIO_LOCATION."/lib/imagesloaded.pkgd.min.js";?>"></script>
-<script type="text/javascript" src="<?php echo $ORTFOLIO_LOCATION."/lib/initGrid.js";?>"></script>
+<script type="text/javascript" src="/lib/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/lib/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/lib/initGrid.js"></script>

@@ -6,9 +6,15 @@
 $ORTFOLIO_LOCATION = "";
 $ROOT = $_SERVER["DOCUMENT_ROOT"].$ORTFOLIO_LOCATION;
 
+/*
+ * The absolute directory of your blog. By default, posts are expected to be in
+ * a folder named `blog`. Change this value if you want your blog in a 
+ * different folder...
+ */
+$BLOG_DIR = "/blog";
+
 /* Enter your name here: */
-$artistName = "ortFolio";
-$version = "1.4.0";
+$artistName = "ortfolio";
 
 /* Section names appear in the sidebar navigation menu, and appear in the
  * same order as they are listed below. Section names must have the same 
@@ -17,24 +23,26 @@ $version = "1.4.0";
  * Follow the template below where:
  *     $sectionNames['your-section-folder-name'] = 'Text in sidenav!';
  */
+$sectionNames["about"] = 'about';
 $sectionNames["flowers"] = 'flowers';
 $sectionNames["portraits"] = 'portraits';
 $sectionNames["landscapes"] = 'landscapes';
+$sectionNames["list"] = 'list';
 $sectionNames["other"] = 'other';
-$sectionNames["about"] = 'about';
-$sectionNames["musics"] = 'muzak';
+$sectionNames["blog"] = 'blog';
+
 
 /* The super gallery is the grid composed of all project thumbnails, pulled from 
  * the following list of sections. Enter the sections you want the super gallery 
  * to pull thumbnailsfrom. You can omit sections too. */
-$superGallerySections = array("flowers","portraits", "vids","landscapes");
+$superGallerySections = array("flowers","portraits", "vids","landscapes", "blog", "list");
 $shuffleThumbnails = true;
 
 /* This is an array of your social media links: $socialMedia['key'] = value;
  * key   = URL to your social media page 
  * value = link text that will appear in side bar */ 
-$socialMedia['http://www.twitter.com/']   = 'twitter';
-$socialMedia['http://www.instagram.com/'] = 'instagram';
+// $socialMedia['http://www.twitter.com/']   = 'twitter';
+// $socialMedia['http://www.instagram.com/'] = 'instagram';
 
 /* If you have a Google Analytics tracking code, paste it into the 
  * googleAnalytics.php file located in the templates folder and set the

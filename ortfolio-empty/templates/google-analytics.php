@@ -1,5 +1,10 @@
 <?php if ($usingGoogleAnalytics) { ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-
-<!-- paste your analytics code above -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5404956-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-5404956-1');
+</script>
 <?php } ?>

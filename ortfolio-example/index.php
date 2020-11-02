@@ -1,9 +1,8 @@
 <?php include (__DIR__)."/config.php" ?>
 <!DOCTYPE html>
-<!-- This website uses ortFolio (v.<?php echo $version; ?>), a free and open template created by Josh Holinaty, 2019.
-Get it at: github.com/oseph/ortfolio. Released under the MIT Licence. -->
 <html>
-  <head>
+<?php include($ROOT ."/templates/ortfolio-credit.php");?>
+<head>
     <?php include $ROOT."/templates/google-analytics.php";?>
 <meta charset="utf-8">
     <title><?php echo $artistName; ?></title>
@@ -15,7 +14,9 @@ Get it at: github.com/oseph/ortfolio. Released under the MIT Licence. -->
   <?php include $ROOT."/templates/sidenav.php"; ?>
   <!-- THUMBNAIL GALLERY -->
   <div class="content">
+    <div class="grid">
   <?php include "templates/super-gallery.php"; ?>
+    </div>
   </div>
   <script type="text/javascript" src="lib/masonry.pkgd.min.js"></script>
   <script type="text/javascript" src="lib/imagesloaded.pkgd.min.js"></script>
