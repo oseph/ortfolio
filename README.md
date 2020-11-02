@@ -1,13 +1,13 @@
-## ortFolio v1.5
+## ortfolio v1.5
 
 _A minimal website template for your image-based portfolio needs!_
 
-ortFolio is a zippy little quasi-static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
+ortfolio is a zippy little quasi-static website. There are no databases to set up or admin backends to log in to: simply organize a few folders, add some project details, and you're off, just like the good ol' days.
 
-Found here is an empty ortFolio template and a very minimal running example. 
+Found here is an empty ortfolio template and a very minimal running example. 
 
 * To see a minimal running example, [go here](https://www.holinaty.com/ortfolio-demo)
-* or [check out this list of websites](ORTFOLIOFANS.md) to see more examples of ortFolio in action
+* or [check out this list of websites](ORTFOLIOFANS.md) to see more examples of ortfolio in action
 
 **Requires**: PHP 7+ (which is pretty standard these days)
 
@@ -20,7 +20,7 @@ $ cd ~/ortfolio-example
 $ php -S localserver:8080
 ```
 
-Then open up your favourite browser and navigate to [http://localhost:8080/](http://localhost:8080/) to see ortFolio in action!
+Then open up your favourite browser and navigate to [http://localhost:8080/](http://localhost:8080/) to see ortfolio in action!
 
 Once you are ready to publish your site, simply upload the contents of your site folder to the root directory where your website is being hosted.
 
@@ -29,9 +29,9 @@ Once you are ready to publish your site, simply upload the contents of your site
 
 Site-wide configuration happens in the `config.php` file located in the root directory of your website. Here you can update site-wide variables such as your name (which appears at the top of in the side navigation menu), section names, social media links, and more.
 
-By default ortFolio is set up to run from the root directory of wherever you're hosting your site from. If that's what you want, then ignore the next paragraph.
+By default ortfolio is set up to run from the root directory of wherever you're hosting your site from. If that's what you want, then ignore the next paragraph.
 
-If you want to serve ortFolio from a sub-folder, e.g. `www.yoursite.com/ortfolio-site`, you will need to modify the `$ORTFOLIO_LOCATION` variable in `config.php` by giving it the absolute web path to the folder you're serving it from. For example, in the URL above `$ORTFOLIO_LOCATION = "/ortfolio-site";` because I've put the contents of that ortFolio site in a folder named `ortfolio-site`, in the root of my server.
+If you want to serve ortfolio from a sub-folder, e.g. `www.yoursite.com/ortfolio-site`, you will need to modify the `$ORTFOLIO_LOCATION` variable in `config.php` by giving it the absolute web path to the folder you're serving it from. For example, in the URL above `$ORTFOLIO_LOCATION = "/ortfolio-site";` because I've put the contents of that ortfolio site in a folder named `ortfolio-site`, in the root of my server.
 
 
 ## Creating Sections
@@ -103,7 +103,7 @@ If you want to embed YouTube/Vimeo videos into a project page, simply paste the 
 
 ## Music Albums?
 
-ortFolio comes with a simple music template page to accommodate a Bandcamp embedded player. Use the `empty-music-project` template and simply paste the iframe embed code into the project config's `$iframe` variable. Thumbnails and other images are the same, but there is also an folder for album cover art. Simply add your images to their respective folder.
+ortfolio comes with a simple music template page to accommodate a Bandcamp embedded player. Use the `empty-music-project` template and simply paste the iframe embed code into the project config's `$iframe` variable. Thumbnails and other images are the same, but there is also an folder for album cover art. Simply add your images to their respective folder.
 
 ## SuperGallery!
 
@@ -130,11 +130,11 @@ You can add Google Analytics to your site by modifying the `google-analytics.php
 
 ## License
 
-**ortFolio** is free, open, and released under the [MIT license](LICENSE.md). Do as you wish with it!
+**ortfolio** is free, open, and released under the [MIT license](LICENSE.md). Do as you wish with it!
 
-**ortFolio** uses [Masonry](https://github.com/desandro/masonry) for the thumbnail grids. Masonry is also released under the MIT license. 
+**ortfolio** uses [Masonry](https://github.com/desandro/masonry) for the thumbnail grids. Masonry is also released under the MIT license. 
 
 ---
 
 Created by me, [Josh Holinaty](https://www.holinaty.com)<br>
-No need to credit me, but if you do use ortFolio for your website needs, I'd love to see it and hear about your experience!
+No need to credit me, but if you do use ortfolio for your website needs, I'd love to see it and hear about your experience!
